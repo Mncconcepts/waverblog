@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Route, Routes, useLocation, Outlet } from "react-router-dom"; // use HashRouter
 import "./App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navitems from "./components/Navitems";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
