@@ -6,21 +6,21 @@ const title = "RECENT BLOGS";
 
 const categoryList = [
   {
-    imgUrl: 'src/assets/images/blog/19.jpg',
+    imgUrl: '/assets/images/blog/19.jpg',
     imgAlt: 'blog image 1',
     date: 'December 10, 2024',
     caption: 'How to Style Your Wardrobe',
     link: '/blog/1',
   },
   {
-    imgUrl: 'src/assets/images/blog/20.jpg',
+    imgUrl: '/assets/images/blog/20.jpg',
     imgAlt: 'blog image 2',
     date: 'December 12, 2024',
     caption: 'Top 10 Fashion Trends for 2024',
     link: '/blog/2',
   },
   {
-    imgUrl: 'src/assets/images/blog/21.jpg',
+    imgUrl: '/assets/images/blog/21.jpg',
     imgAlt: 'blog image 3',
     date: 'December 14, 2024',
     caption: 'Sustainable Fashion: A Guide',
