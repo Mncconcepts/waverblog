@@ -25,36 +25,28 @@ function App() {
     });
   }, []);
 
-  return (
-    <Router>
-      <div className={`app ${darkMode ? "dark-mode" : "light-mode"}`}>
-        <Routes>
-          {/* Define routes for the application */}
-          <Route path="/" element={<Signup onLogin={handleLogin} />} />
-          <Route path="/signup" element={<Signup onLogin={handleLogin} />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
-        </Routes>
+    return (
+    <div className={`app ${darkMode ? "dark-mode" : "light-mode"}`}>
+      <Routes>
+        {/* Define routes for the application */}
+        <Route path="/" element={<Signup onLogin={handleLogin} />} />
+        <Route path="/signup" element={<Signup onLogin={handleLogin} />} />
+        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+      </Routes>
 
-        {/* Render Navbar, Footer, and other components only if not on the signup page */}
-        {/* Use Router hooks like useLocation only after Router is set */}
-        <Route path="/" element={null}>
-          <Route
-            path="*"
-            element={
-              <>
-                <Navitems user={user} />
-                <div className="main-container">
-                  <div className="content">
-                    <Outlet />
-                  </div>
-                  <Footer />
-                </div>
-              </>
-            }
-          />
-        </Route>
-      </div>
-    </Router>
+      {/* Render Navitems, Footer, and other components only if not on the signup page */}
+      {!isSignupPage && (
+        <>
+          <Navitems user={user} />
+          <div className="main-container">
+            <div className="content">
+              <Outlet />
+            </div>
+            <Footer />
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
