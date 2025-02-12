@@ -15,6 +15,7 @@ function App() {
   const handleLogin = (profile) => {
     setUser(profile); 
   };
+  const isSignupPage = location.pathname === "/";
 
   useEffect(() => {
     AOS.init({
