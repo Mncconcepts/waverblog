@@ -40,7 +40,7 @@ function App() {
       {/* Render Navbar, Footer, and other components only if not on the signup page */}
       {!isSignupPage && (
         <>
-          <Navbar user={user} />
+          <Navitems user={user} />
           <div className="main-container">
             <div className="content">
               <Outlet />
