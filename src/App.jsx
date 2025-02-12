@@ -30,8 +30,8 @@ function App() {
     <div className={`app ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Routes>
         {/* Define routes for the application */}
-        <Route path="/" element={<SignUp onLogin={handleLogin} />} />
-        <Route path="/signup" element={<SignUp onLogin={handleLogin} />} />
+        <Route path="/" element={<Signup onLogin={handleLogin} />} />
+        <Route path="/signup" element={<Signup onLogin={handleLogin} />} />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
       </Routes>
 
