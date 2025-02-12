@@ -13,6 +13,18 @@ function App() {
 
   const handleLogin = (profile) => {
     setUser(profile); 
+  };
+
+  const isSignupPage = location.pathname === "/";
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: true,
+    });
+  }, []);
 
     return (
     <div className={`app ${darkMode ? "dark-mode" : "light-mode"}`}>
