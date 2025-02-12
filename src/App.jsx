@@ -27,29 +27,27 @@ function App() {
   }, []);
 
   return (
-    <Router> {/* Wrap everything with Router */}
-      <div className={`app ${darkMode ? "dark-mode" : "light-mode"}`}>
-        <Routes>
-          {/* Define routes for the application */}
-          <Route path="/" element={<Signup onLogin={handleLogin} />} />
-          <Route path="/signup" element={<Signup onLogin={handleLogin} />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
-        </Routes>
+    <div className={`app ${darkMode ? "dark-mode" : "light-mode"}`}>
+      <Routes>
+        {/* Define routes for the application */}
+        <Route path="/" element={<SignUp onLogin={handleLogin} />} />
+        <Route path="/signup" element={<SignUp onLogin={handleLogin} />} />
+        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+      </Routes>
 
-        {/* Render Navbar, Footer, and other components only if not on the signup page */}
-        {!isSignupPage && (
-          <>
-            <Navitems user={user} />
-            <div className="main-container">
-              <div className="content">
-                <Outlet />
-              </div>
-              <Footer />
+      {/* Render Navbar, Footer, and other components only if not on the signup page */}
+      {!isSignupPage && (
+        <>
+          <Navbar user={user} />
+          <div className="main-container">
+            <div className="content">
+              <Outlet />
             </div>
-          </>
-        )}
-      </div>
-    </Router>
+            <Footer />
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
