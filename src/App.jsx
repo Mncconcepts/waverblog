@@ -7,6 +7,13 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [user, setUser] = useState(null);
+  const location = useLocation();
+
+  const handleLogin = (profile) => {
+    setUser(profile); 
+
     return (
     <div className={`app ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Routes>
